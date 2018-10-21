@@ -1,0 +1,9 @@
+[
+    {"name":"Iruttu Kadai (Halwa Store)", "location":{"lat": 8.728097133117144, "lng": 77.68889402898726}, "id":0},
+    {"name":"King's Chic Arasan Hotel", "location":{"lat": 8.72463621714457, "lng": 77.73158030016376}, "id":1},
+    {"name":"Hotel Vaira maligai", "location":{"lat": 8.727283463235588, "lng": 77.72713700328777},"id":2},
+    {"name":"Sri Janakiram Hotels", "location":{"lat": 8.732319, "lng": 77.711029},"id":3},
+    {"name":"Marrybrown", "location":{"lat": 8.724888586795725, "lng": 77.72135206759728},"id":4},
+    {"name":"Arasan Bakery", "location":{"lat": 8.731146821066499, "lng": 77.71059743595491},"id":5}
+    
+]
