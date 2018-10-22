@@ -20,7 +20,7 @@ class LocationList extends React.Component {
             onChange={e=>this.props.updateQuery(e.target.value)}
             />
             <ul 
-            aria-label = 'List of beaches'>
+            aria-label = 'List of Restaurant'>
             {this.props.workingList.map( location =>
             <li 
             data-key={location.id} 
