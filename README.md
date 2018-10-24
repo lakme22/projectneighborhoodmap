@@ -88,9 +88,10 @@ Trying to fix this issue in future
 
 ### `infoWindow`
 
-I have worked oninfowindow,The <click for pictures> link in infowindow is to fetch pictures from flickr, but i couldnot implement my code to fetch data from flickrapi.i am trying to fix this issue in future,I have given the link to <"https://www.tripadvisor.in/Restaurants-g1584851-Tirunelveli_Tirunelveli_District_Tamil_Nadu.html">
+I have worked on infowindow,The <click for pictures> link in infowindow is to fetch pictures from flickr, but i couldn't implement my code to fetch data from flickrapi.i am trying to fix this issue in future,I have given the link to <"https://www.tripadvisor.in/Restaurants-g1584851-Tirunelveli_Tirunelveli_District_Tamil_Nadu.html">
   
+ ### `resources`
+ <http://accessibleculture.org/articles/2010/05/tabindex/>
  
-
 
 
