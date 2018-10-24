@@ -68,7 +68,6 @@ class App extends React.Component {
   //initializing Google Maps showing Tirunelveli
   drawMap() {
     let Tirunelveli = new window.google.maps.LatLng(11.127123,  78.656891)
-
     let map = new window.google.maps.Map(document.getElementById('map'), {
       center: Tirunelveli,
       zoom: 13,
@@ -108,11 +107,12 @@ class App extends React.Component {
       marker.openInfoWindow = function () {
        
         let content =
-          `<div id='info'>
-        <div><strong><h1>${marker.title}</h1></strong></div>
-        <div><strong><p>Click for pictures</p></strong></div>
-        </div>
-        `
+          `<div id='info'>`+
+        `<div><strong><h1>${marker.title}</h1></strong></div>`+
+        `<div><p>`+`One of the Best Restaurants in Tirunelveli`+`</div></p>`+
+        `<div><strong><p>`+`<a href="https://www.tripadvisor.in/Restaurants-g1584851-Tirunelveli_Tirunelveli_District_Tamil_Nadu.html">`+`Click for pictures` + `</a>`+`</p></strong></div>`+
+        `</div>`;
+        
         if (infowindow) infowindow.close();
         infowindow = new window.google.maps.InfoWindow({ content: content });
         infowindow.open(map, marker);
@@ -127,7 +127,7 @@ class App extends React.Component {
         marker.setAnimation(window.google.maps.Animation.BOUNCE);
         setTimeout(function () {
           marker.setAnimation(null);
-        }, 800);
+        }, 1400);
       });
 
       bounds.extend(markers[i].position);
@@ -194,7 +194,7 @@ class App extends React.Component {
     markers[index].setAnimation(window.google.maps.Animation.BOUNCE);
     setTimeout(function () {
       markers[index].setAnimation(null);
-    }, 800);
+    }, 1400);
     // eslint-disable-next-line
     window.innerWidth < 550 ? this.setState({ searchHidden: true }) : null
     this.setState({ workingList: locations })
@@ -257,4 +257,3 @@ class App extends React.Component {
 }
 
 export default App
-
