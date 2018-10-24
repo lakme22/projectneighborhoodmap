@@ -191,6 +191,12 @@ span {
     justify-content: center;
 }
 
+
+:focus{
+    input:focus;
+    background-color: #EEEEEE;
+}
+
 @media only screen and (max-width: 730px) {
     .right-column {
         width: 35%;
