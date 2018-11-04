@@ -72,6 +72,10 @@ See the section about [deployment](#deployment) for more information.
 As we have used flickrapi.<br>
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
+### `npm install --save escape-string-regexp`
+
+<https://stackoverflow.com/questions/37064290/what-does-escape-a-string-mean-in-regex-javascript>
+
 ### `npm start`
 
 Runs the app in the development mode.<br>
