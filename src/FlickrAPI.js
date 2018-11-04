@@ -17,7 +17,7 @@ export const fetchFlickrImages = (tag) => {
 &format=json&nojsoncallback=1
 &per_page=10
 &tag_mode=all
-&tags=syros%2C+${tag}
+&tags=Tirunelveli%2C+${tag}
 `
   //console.log(request)
   fetch(request)
