@@ -11,6 +11,7 @@ let markers = []
 let marker = ''
 let infowindows = []
 let map = "";
+let i;
 
 class App extends React.Component {
   constructor(props) {
@@ -110,7 +111,7 @@ class App extends React.Component {
           `<div id='info'>`+
         `<div><strong><h1>${marker.title}</h1></strong></div>`+
         `<div><p>`+`One of the Best Restaurants in Tirunelveli`+`</div></p>`+
-        `<div><strong><p>`+`<a href="https://www.tripadvisor.in/Restaurants-g1584851-Tirunelveli_Tirunelveli_District_Tamil_Nadu.html">`+`Click for pictures` + `</a>`+`</p></strong></div>`+
+        `<div><strong><p>`+`<a href="https://www.flickr.com/search/?text=%20tirunelveli%20restaurant">`+`Click for pictures` + `</a>`+`</p></strong></div>`+
         `</div>`;
         
         if (infowindow) infowindow.close();
@@ -123,12 +124,16 @@ class App extends React.Component {
       // put the method in as a handler
        // eslint-disable-next-line
       window.google.maps.event.addListener(marker, "click", marker.openInfoWindow);
-      window.google.maps.event.addListener(marker, "click", function () {
-        marker.setAnimation(window.google.maps.Animation.BOUNCE);
-        setTimeout(function () {
-          marker.setAnimation(null);
-        }, 1400);
-      });
+      /* tried to add some animation for marker,will be addressing this issue in future 
+       https://stackoverflow.com/questions/40739353/google-maps-animate-particular-marker-on-click */
+      window.google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+            if (marker.getAnimation() != null) {
+                marker.setAnimation(null);
+            } else {
+                marker.setAnimation(window.google.maps.Animation.BOUNCE);
+            }}
+    })(marker, i));
 
       bounds.extend(markers[i].position);
       this.setState({ locations: restaurant, workingList: restaurant, infowindows: infowindows, markers: markers, bounds: bounds })
@@ -191,10 +196,16 @@ class App extends React.Component {
     e.preventDefault()
     index = e.target.dataset.key
     markers[index].openInfoWindow()
-    markers[index].setAnimation(window.google.maps.Animation.BOUNCE);
-    setTimeout(function () {
-      markers[index].setAnimation(null);
-    }, 1400);
+    marker.addListener('click', (function(marker, i) {
+      return function() {
+          if (marker.getAnimation() != null) {
+              marker.setAnimation(null);
+          } else {
+              marker.setAnimation(window.google.maps.Animation.BOUNCE);
+          }
+  
+      }
+  })(marker, i));
     // eslint-disable-next-line
     window.innerWidth < 550 ? this.setState({ searchHidden: true }) : null
     this.setState({ workingList: locations })
@@ -243,7 +254,8 @@ class App extends React.Component {
               markers={this.state.markers}
               workingList={this.state.workingList}
               searchHidden={this.state.searchHidden}
-            /> : null}
+            /> : ""
+          } 
         </section>
         <Modal
           isVisible={this.state.isVisible}
