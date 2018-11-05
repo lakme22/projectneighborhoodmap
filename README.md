@@ -93,6 +93,11 @@ Trying to fix this issue in future
 ### `infoWindow`
 
 I have worked on infowindow,The <click for pictures> link in infowindow is to fetch pictures from flickr, but i couldn't implement my code to fetch data from flickrapi.i am trying to fix this issue in future,I have given the link to <"https://www.tripadvisor.in/Restaurants-g1584851-Tirunelveli_Tirunelveli_District_Tamil_Nadu.html">
+
+### `Marker`
+
+Tried to add marker animation.Trying to fix it in future 
+<https://stackoverflow.com/questions/40739353/google-maps-animate-particular-marker-on-click>
   
  ### `resources`
  <http://accessibleculture.org/articles/2010/05/tabindex/>
