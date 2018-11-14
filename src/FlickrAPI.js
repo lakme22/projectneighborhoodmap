@@ -5,6 +5,7 @@
 
 //key,results per request=10 
 //let tag = this.props.modalTitle
+import axios from 'axios';
 
 export const fetchFlickrImages = (tag) => {
   let target = document.getElementById('images')
@@ -18,7 +19,16 @@ export const fetchFlickrImages = (tag) => {
 &per_page=10
 &tag_mode=all
 &tags=Tirunelveli%2C+${tag}
-`
+`;
+  axios.get(`https://api.flickr.com/services/rest/?
+  &api_key=0ecbbdfb05ec682b91fba2dcf7f2c5bf
+  &method=flickr.photos.search
+  &format=json&nojsoncallback=1
+  &per_page=10
+  &tag_mode=all
+  &tags=Tirunelveli`).then( res => {
+    console.log(res);
+  })
   //console.log(request)
   fetch(request)
     .then(response => response.json())
@@ -44,3 +54,4 @@ export const fetchFlickrImages = (tag) => {
     target.appendChild(h);
     console.warn(error) })
 }
+
