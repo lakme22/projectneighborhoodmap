@@ -104,5 +104,10 @@ As of now, marker is animated when the user clicks on the marker itself.
  
 <https://www.npmjs.com/package/react-leaflet-animated-marker>
 
-###`UDACITY REVIEW`
+
+### `UDACITY REVIEW`
+
 ![1](https://user-images.githubusercontent.com/36790663/48881555-07bbd980-ee3c-11e8-8668-894854bf43e8.PNG)
+![2](https://user-images.githubusercontent.com/36790663/48881613-61240880-ee3c-11e8-9714-83c37621cd43.PNG)
+![3](https://user-images.githubusercontent.com/36790663/48881615-61bc9f00-ee3c-11e8-92fb-84836fc8c68f.PNG)
+![4](https://user-images.githubusercontent.com/36790663/48881616-61bc9f00-ee3c-11e8-9740-9796bc60ba6c.PNG)
